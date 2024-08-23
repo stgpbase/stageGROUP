@@ -22,38 +22,91 @@
         }
         
         img {
-            width: 370px; /* Define a largura da imagem */
-            height: 40px; /* Mantém a proporção da imagem */
-            margin: 0px; /* Adiciona margem ao redor da imagem */
+            width: 370px; /* Define a largura da imagem do topo */
+            height: 40px; /* Mantém a proporção da imagem do topo */
+            margin: 0px; /* Adiciona margem ao redor da imagem do topo */
             border: 0px solid white; /* Adiciona uma borda branca */
             margin-top: 0px;
         }
+
+        .bolso-img {
+            max-width: 170px; /* Define um tamanho máximo para a imagem do bolso */
+            height: 81px; /* Mantém a proporção da imagem */
+            display: block; /* Garante que a imagem seja tratada como um bloco */
+            margin: -83px auto; /* Centraliza a imagem e adiciona margem */
+            opacity: 0.2;
+            filter: blur(1px);
+            position: absolute;
+            z-idex: 1;
+        }
         
         mark {
-            background-color: #ffeb3b; /* Cor de fundo personalizada */
+            background-color: grey; /* Cor de fundo personalizada */
             color: white; /* Cor do texto */
             padding: 0px 0px; /* Espaçamento interno */
-            border-radius: 10px; /* Bordas arredondadas */
+            border-radius: 0px; /* Bordas arredondadas */
             font-weight: bold; /* Negrito */
+            opacity: 0.7;
         }
         
         h1 {
-          font-size: 52px;
-          margin-top: 0px;
-          letter-spacing: 10px;
-          font-weight: bold;
-          opacity: 1;
-          margin: 0;
-          padding: 0;
+            font-size: 12px;
+            margin-top: 0px;
+            letter-spacing: 10px;
+            font-weight: bold;
+            opacity: 1;
+            margin: 0;
+            padding: 0;
         }
         
         p {
-          font-size: 8px;
-          margin-top: 0px;
+            font-size: 8px;
+            margin-top: 0px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 colunas de largura igual */
+            gap: 10px; /* Espaço entre os itens */
+            margin-top: 0px; /* Adiciona um espaço acima do contêiner */
+        }
+        
+        .topico {
+            border: 0px solid white; /* Adiciona uma borda para visualização */
+            padding: 10px; /* Adiciona um pouco de preenchimento */
+            z-idex: 2;
+            position: relative;
+        }
+        
+        h2 {
+          color: darkolivegreen;
+          opacity: 1;
         }
     </style>
 </head>
 <body>
-        <img src="imagens/logomov.gif" alt="logo" width="500">
+    <img src="imagens/logomov.gif" alt="logo" width="500">
+    
+    <h1>faça o palhaço chorar.</h1>
+    
+    <div class="container">
+        <div class="topico">
+            <h2>Quem Somos?</h2>
+            <p><mark><a href="https://youtube.com/@stagegrouptatical?si=hpo7iFwI5yGt1Xll" style="color: blue; text-decoration: none;">Stage Group</a></mark> é formada por 4 homens de nacionalidade brasileira, ambos com experiência militar no Exército Brasileiro como <mark>Temporários</mark>, <mark>Já desligados da instituição</mark>, Um Português mecânico de aeronaves <mark>AAN</mark> e o último, Até o momento, Direto do Paraguai <mark>ativo na classe de infantaria</mark> do Exército Paraguaio. Totalizando <mark>6 MEMBROS</mark> com idades entre 22 a 35 anos.</p>
+            <img src="http://getwallpapers.com/wallpaper/full/f/a/1/600115.jpg" alt="bolso" class="bolso-img">
+        </div>
+
+        <div class="topico">
+            <h2>Objetivo</h2>
+            <p>?</p>
+        </div>
+
+        <div class="topico">
+            <h2>Anonimato?</h2>
+            <p>?</p>
+        </div>
+    </div>
 </body>
 </html>

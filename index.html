@@ -41,6 +41,20 @@
             margin: 0px; /* Adiciona margem ao redor da imagem do topo */
             border: 0px solid white;
             margin-top: 10px;
+            position: relative; /* Para permitir o uso de transformações */
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateX(0%); /* Começa fora da tela à esquerda */
+            animation: fadeIn 10s forwards; /* Duração de 15 segundos */
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateX(0); /* Move para a posição original */
+            }
         }
 
         .bolso-img {
@@ -55,12 +69,12 @@
         }
         
         mark {
-            background-color: grey;
+            background-color: black;
             color: white;
             padding: 0px 0px;
             border-radius: 0px;
             font-weight: bold;
-            opacity: 0.7;
+            opacity: 1;
         }
         
         h1 {
@@ -68,7 +82,6 @@
             margin-top: -15px;
             letter-spacing: 10px;
             font-weight: bold;
-            font-style: italic;
             opacity: 1;
             margin: 0;
             padding: 0;
@@ -98,10 +111,10 @@
         }
         
         h2 {
-          color: darkred;
+          color: #372A13;
           opacity: 1;
           font-family: 'Helvetica', Sans-Serif;
-          text-shadow:0.2px 0.3px 0px rgba(0, 0, 0, 1);
+          text-shadow: 0.8px 0.8px 0px rgba(0, 0, 0, 1);
         }
 
         .typing-effect {
@@ -115,16 +128,17 @@
           margin-top: -15px;
           text-shadow:0.2px 0.3px 0px rgba(0, 0, 0, 1);
           color: lightgrey;
+          font-family: 'Arial', Sans-Serif;
 
         }
 
         .loader {
-            border: 8px solid rgba(255, 255, 255, 0.3); /* Cor do fundo do loader */
-            border-top: 8px solid white; /* Cor da parte superior do loader */
+            border: 2px solid rgba(0, 0, 0, 0.5); /* Cor do fundo do loader */
+            border-top: 2px solid white; /* Cor da parte superior do loader */
             border-radius: 50%; /* Forma circular */
-            width: 40px; /* Largura do loader */
-            height: 40px; /* Altura do loader */
-            animation: spin 1s linear infinite; /* Animação de rotação */
+            width: 15px; /* Largura do loader */
+            height: 15px; /* Altura do loader */
+            animation: spin 0.3s linear infinite; /* Animação de rotação */
             margin: 20px auto; /* Centraliza o loader */
         }
 
@@ -137,13 +151,13 @@
 <body>
     <div class="background" id="background"></div> <!-- Div para a imagem de fundo -->
     
-    <img src="imagens/stage.png" alt="logo" width="500">
+    <img src="imagens/stage.png" alt="logo" width="500" class="fade-in"> <!-- Adicionada a classe fade-in -->
     
     <h1 class="typing-effect" id="typing-text"></h1> <!-- Texto com efeito de digitação -->
     
     <div class="container">
         <div class="topico">
-            <h2>NÓS</h2>
+            <h2>QUEM SOMOS</h2>
             <p><mark>Stage Group</mark> é formada por 4 homens de nacionalidade brasileira, ambos com experiência militar no Exército Brasileiro como <mark>Temporários</mark>, <mark>Já desligados da instituição</mark>, Um Português mecânico de aeronaves <mark>AAN</mark> e o último, Até o momento, Direto do Paraguai <mark>ativo na classe de infantaria</mark> do Exército Paraguaio. Totalizando <mark>6 MEMBROS</mark> com idades entre 22 a 35 anos.</p>
         </div>
 

@@ -57,6 +57,8 @@
             opacity: 1;
             margin: 0;
             padding: 0;
+            display: inline-block; /* Para que o h1 se comporte como um bloco inline */
+            animation: marquee 10s linear infinite; /* Define a animação */
         }
         
         p {
@@ -72,7 +74,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr); /* 3 colunas de largura igual */
             gap: 10px; /* Espaço entre os itens */
-            margin-top: -16px; /* Adiciona um espaço acima do contêiner */
+            margin-top: -10px; /* Adiciona um espaço acima do contêiner */
         }
         
         .topico {
@@ -93,7 +95,7 @@
 <body>
     <img src="imagens/logomov.gif" alt="logo" width="500">
     
-    <h1><marquee>faça o palhaço chorar.</marquee></h1>
+    <h1>faça o palhaço chorar.</h1>
     
     <div class="container">
         <div class="topico">

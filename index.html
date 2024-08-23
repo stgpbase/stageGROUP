@@ -9,18 +9,32 @@
             box-sizing: border-box;
         }
         body {
-            background-image: url("https://images3.alphacoders.com/105/105977.jpg"); /* Adicione a URL da imagem aqui, se necessário */
-            background-color: black; /* Defina uma cor de fundo padrão */
-            background-size: cover; /* Faz a imagem cobrir todo o fundo */
-            background-position: center; /* Centraliza a imagem */
-            background-repeat: no-repeat; /* Impede a repetição da imagem */
             height: 100vh; /* Define a altura do body para 100% da altura da janela */
             margin: 0; /* Remove margens padrão */
             font-family: 'Consolas', monospace; /* Altera a fonte para Consolas */
             color: white;
             text-align: center;
+            position: relative; /* Para posicionar o fundo corretamente */
+            overflow: hidden; /* Impede a rolagem */
+            background-color: black; /* Cor de fundo do body */
         }
-        
+
+        .background {
+            background-image: url("https://images3.alphacoders.com/105/105977.jpg");
+            background-color: black; /* Cor de fundo inicial */
+            background-size: cover; /* Faz a imagem cobrir todo o fundo */
+            background-position: center; /* Centraliza a imagem */
+            background-repeat: no-repeat; /* Impede a repetição da imagem */
+            height: 100%; /* Altura total */
+            width: 100%; /* Largura total */
+            position: absolute; /* Posiciona como fundo */
+            top: 0; /* Alinha ao topo */
+            left: 0; /* Alinha à esquerda */
+            opacity: 0; /* Inicialmente invisível */
+            transition: opacity 5s ease; /* Efeito de transição de opacidade */
+            z-index: -1; /* Coloca atrás do conteúdo */
+        }
+
         img {
             width: 390px; /* Define a largura da imagem do topo */
             height: 40px; /* Mantém a proporção da imagem do topo */
@@ -37,7 +51,7 @@
             opacity: 0.2;
             filter: blur(1px);
             position: absolute;
-            z-idex: 1;
+            z-index: 1;
         }
         
         mark {
@@ -59,7 +73,6 @@
             margin: 0;
             padding: 0;
             text-shadow:0.2px 0.3px 0px rgba(0, 0, 0, 1);
-
         }
         
         p {
@@ -68,7 +81,6 @@
             position: relative;
             z-index: 2;
             text-shadow:0.2px 0.3px 0px rgba(0, 0, 0, 1);
-
         }
         
         .container {
@@ -81,7 +93,7 @@
         .topico {
             border: 0px solid white;
             padding: 10px;
-            z-idex: 2;
+            z-index: 2;
             position: relative;
         }
         
@@ -91,12 +103,43 @@
           font-family: 'Helvetica', Sans-Serif;
           text-shadow:0.2px 0.3px 0px rgba(0, 0, 0, 1);
         }
+
+        .typing-effect {
+            border-right: 2px solid white; /* Cursor de digitação */
+            white-space: nowrap; /* Impede a quebra de linha */
+            overflow: hidden; /* Esconde o texto que ainda não foi "digitado" */
+        }
+        
+        h6 {
+          text-align: center;
+          margin-top: -15px;
+          text-shadow:0.2px 0.3px 0px rgba(0, 0, 0, 1);
+          color: lightgrey;
+
+        }
+
+        .loader {
+            border: 8px solid rgba(255, 255, 255, 0.3); /* Cor do fundo do loader */
+            border-top: 8px solid white; /* Cor da parte superior do loader */
+            border-radius: 50%; /* Forma circular */
+            width: 40px; /* Largura do loader */
+            height: 40px; /* Altura do loader */
+            animation: spin 1s linear infinite; /* Animação de rotação */
+            margin: 20px auto; /* Centraliza o loader */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
+    <div class="background" id="background"></div> <!-- Div para a imagem de fundo -->
+    
     <img src="imagens/stage.png" alt="logo" width="500">
     
-    <h1>faça o palhaço chorar.</h1>
+    <h1 class="typing-effect" id="typing-text"></h1> <!-- Texto com efeito de digitação -->
     
     <div class="container">
         <div class="topico">
@@ -107,7 +150,6 @@
         <div class="topico">
             <h2>OBJETIVO</h2>
             <p>"Somos claros em dizer que nosso objetivo é passar longe da <mark>Romantização de Guerras e do Militarismo</mark>, De modo geral. Cada um de nós tem <mark>Habilidades</mark> úteis e <mark>experiências</mark> a serem compartilhadas para a criação de conteúdo audiovisual nas plataformas, <mark>Visando principalmente o lado psicológico de ex-militares e daqueles que estão na ativa</mark>, independentemente da área de atuação. <mark>Daremos voz</mark> aos <mark>sentimentos</mark> de muitos que estão <mark>calados por alguma razão.</mark>"</p>
-</p>
         </div>
 
         <div class="topico">
@@ -115,5 +157,37 @@
             <p><mark>Nenhum</mark> dos membros tem perfil nas redes sociais. O único ativo além do YouTube continua sendo o TikTok do <a href="https://www.tiktok.com/@borgesmilitary?_t=8p72xZLKQy6&_r=1">@borgesmilitary</a>; <mark>nem mesmo a Stage Group tem algo além do YouTube</mark>. E isso não é para nos escondermos de algo, mas sim porque <mark>não temos interesse nenhum na fama ou no sucesso</mark>. Se crescermos, é pelo conteúdo que entregamos e não por embustes saturados.</p>
         </div>
     </div>
+
+    <div class="loader"></div> <!-- Ícone de carregamento -->
+    
+    <h6>NOVIDADES EM BREVE</h6>
+    <p>links:<br>    <a href="https://youtube.com/@stagegrouptatical?si=ZiJgIz5qHzprga-x" style="font-size;10px;">Canal No YouTube</a>
+</p>
+    <script>
+        // Função para aplicar o efeito de fade-in
+        window.onload = function() {
+            document.getElementById('background').style.opacity = 1; // Altera a opacidade para 1 após o carregamento
+            typeWriter("faça o palhaço chorar."); // Inicia o efeito de digitação
+        };
+
+        // Função para o efeito de digitação
+        function typeWriter(text) {
+            let i = 0;
+            const speed = 100; // Velocidade de digitação em milissegundos
+            const typingTextElement = document.getElementById("typing-text");
+
+            function type() {
+                if (i < text.length) {
+                    typingTextElement.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                } else {
+                    // Remove o cursor após a digitação
+                    typingTextElement.style.borderRight = "none";
+                }
+            }
+            type();
+        }
+    </script>
 </body>
 </html>

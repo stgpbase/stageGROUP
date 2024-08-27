@@ -1,206 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>stageGROUP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forum</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        html, body {
+            height: 100%;
+            margin: 0px;
         }
         body {
-            height: 100vh; /* Define a altura do body para 100% da altura da janela */
-            margin: 0; /* Remove margens padrão */
-            font-family: 'Consolas', monospace; /* Altera a fonte para Consolas */
             color: white;
+            margin: 0px;
             text-align: center;
-            position: relative; /* Para posicionar o fundo corretamente */
-            overflow: hidden; /* Impede a rolagem */
-            background-color: black; /* Cor de fundo do body */
-        }
-
-        .background {
-            background-image: url("https://images3.alphacoders.com/105/105977.jpg");
-            background-color: black; /* Cor de fundo inicial */
-            background-size: cover; /* Faz a imagem cobrir todo o fundo */
-            background-position: center; /* Centraliza a imagem */
-            background-repeat: no-repeat; /* Impede a repetição da imagem */
-            height: 100%; /* Altura total */
-            width: 100%; /* Largura total */
-            position: absolute; /* Posiciona como fundo */
-            top: 0; /* Alinha ao topo */
-            left: 0; /* Alinha à esquerda */
-            opacity: 0; /* Inicialmente invisível */
-            transition: opacity 5s ease; /* Efeito de transição de opacidade */
-            z-index: -1; /* Coloca atrás do conteúdo */
-        }
-
-        img {
-            width: 390px; /* Define a largura da imagem do topo */
-            height: 40px; /* Mantém a proporção da imagem do topo */
-            margin: 0px; /* Adiciona margem ao redor da imagem do topo */
-            border: 0px solid white;
-            margin-top: 10px;
-            position: relative; /* Para permitir o uso de transformações */
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateX(0%); /* Começa fora da tela à esquerda */
-            animation: fadeIn 10s forwards; /* Duração de 15 segundos */
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-                transform: translateX(0); /* Move para a posição original */
-            }
-        }
-
-        .bolso-img {
-            max-width: 170px;
-            height: 81px;
-            display: block;
-            margin: -83px auto;
-            opacity: 0.2;
-            filter: blur(1px);
-            position: absolute;
-            z-index: 1;
-        }
-        
-        mark {
-            background-color: black;
-            color: white;
-            padding: 0px 0px;
-            border-radius: 0px;
-            font-weight: bold;
-            opacity: 1;
-        }
-        
-        h1 {
-            font-size: 12px;
-            margin-top: -15px;
-            letter-spacing: 10px;
-            font-weight: bold;
-            opacity: 1;
-            margin: 0;
-            padding: 0;
-            text-shadow:0.2px 0.3px 0px rgba(0, 0, 0, 1);
-        }
-        
-        p {
-            font-size: 8px;
-            margin-top: 0px;
+            background-color: #000000;
+            font-family: 'Consolas', monospace;
+            font-weight: 40;
             position: relative;
-            z-index: 2;
-            text-shadow:0.2px 0.3px 0px rgba(0, 0, 0, 1);
+            overflow: ;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('imagens/bandeira.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.3;
+            filter: contrast(1.5) blur(0px) saturate(0);
+            z-index: -1;
         }
         
-        .container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .topico {
-            border: 0px solid white;
-            padding: 10px;
-            z-index: 2;
-            position: relative;
-        }
-        
-        h2 {
-          color: #372A13;
-          opacity: 1;
-          font-family: 'Helvetica', Sans-Serif;
-          text-shadow: 0.8px 0.8px 0px rgba(0, 0, 0, 1);
-        }
-
-        .typing-effect {
-            border-right: 2px solid white; /* Cursor de digitação */
-            white-space: nowrap; /* Impede a quebra de linha */
-            overflow: hidden; /* Esconde o texto que ainda não foi "digitado" */
+        .stage {
+          filter: drop-shadow(1px 0.9px 0px rgba(0, 0, 0, 0.5));
         }
         
         h6 {
-          text-align: center;
-          margin-top: -15px;
-          text-shadow:0.2px 0.3px 0px rgba(0, 0, 0, 1);
-          color: lightgrey;
-          font-family: 'Arial', Sans-Serif;
-
+          margin-top: 10px;
+          letter-spacing: 0px;
+          font-size: 10px;
+          margin: 7px;
         }
-
-        .loader {
-            border: 2px solid rgba(0, 0, 0, 0.5); /* Cor do fundo do loader */
-            border-top: 2px solid white; /* Cor da parte superior do loader */
-            border-radius: 50%; /* Forma circular */
-            width: 15px; /* Largura do loader */
-            height: 15px; /* Altura do loader */
-            animation: spin 0.3s linear infinite; /* Animação de rotação */
-            margin: 20px auto; /* Centraliza o loader */
+        
+        .bandeira {
+          filter: drop-shadow(9px 20px 17px rgba(0, 0, 0, 0.6));
+          display: block;
+          margin: 0 auto;
+          margin-top: 10px;
         }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        
+        h2 {
+          font-family: 'Times New Roman', Times, serif;
+          letter-spacing: 0px;
+          margin-top: 17px;
+          font-weight: 50;
+          color: white;
+        }
+        
+        p {
+          font-family: 'Times New Roman', Times, serif;
+          color: #C0C0C0;
+          margin-top: -18px;
+          font-weight: 40;
+          font-size: 12px;
+        }
+        
+        h4 {
+           font-family: 'Times New Roman', Times, serif;
+           font-weight: 40;
+           color: white;
+        }
+        
+        .gallery {
+            position: relative;
+            max-width: 300px;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .gallery img {
+            width: 100%;
+            display: none;
+        }
+        
+        .gallery img.active {
+            display: block;
+        }
+        
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .arrow.left {
+            left: 10px;
+        }
+        
+        .arrow.right {
+            right: 10px;
+        }
+        
+        .link-telegram {
+          color: #076BFF;
+        }
+        
+        .youtube {
+          color:red;
         }
     </style>
 </head>
 <body>
-    <div class="background" id="background"></div> <!-- Div para a imagem de fundo -->
+    <img src="imagens/logo.png" alt="Logo" height="40px" class="stage">
+    <h2>PARAMILITAR?</h2>
+    <p>Um grupo paramilitar é uma organização armada que opera de forma não oficial e que, Geralmente, Não é reconhecida como uma força militar legítima por um Estado. Esses grupos podem ser formados por civis e têm diversas motivações, Que podem incluir políticas, Ideológicas, Étnicas ou religiosas.<br>Em resumo, grupos paramilitares são organizações armadas que operam fora do controle estatal, Com uma variedade de motivações e métodos, Ee que podem ter impactos significativos na segurança e na dinâmica social de uma região.<br><mark>NÓS NÃO SOMOS UM GRUPO PARAMILITAR!</mark></p>
+    <h4>ATIVISMO</h4>
+    <p>Ativismo, em si, não é um crime. Trata-se de uma prática legítima de expressão e mobilização em torno de causas sociais, políticas, econômicas ou ambientais. <mark>O ativismo é uma forma de participação cívica e pode ser fundamental para a promoção de mudanças e a defesa de direitos.</mark></p>
     
-    <img src="imagens/stage.png" alt="logo" width="500" class="fade-in"> <!-- Adicionada a classe fade-in -->
-    
-    <h1 class="typing-effect" id="typing-text"></h1> <!-- Texto com efeito de digitação -->
-    
-    <div class="container">
-        <div class="topico">
-            <h2>QUEM SOMOS</h2>
-            <p><mark>Stage Group</mark> é formada por 4 homens de nacionalidade brasileira, ambos com experiência militar no Exército Brasileiro como <mark>Temporários</mark>, <mark>Já desligados da instituição</mark>, Um Português mecânico de aeronaves <mark>AAN</mark> e o último, Até o momento, Direto do Paraguai <mark>ativo na classe de infantaria</mark> do Exército Paraguaio. Totalizando <mark>6 MEMBROS</mark> com idades entre 22 a 35 anos.</p>
-        </div>
+    <div class="gallery">
+        <img src="imagens/imperio.jpg" alt="ativismo" class="active">
+        <img src="imagens/bandeira.jpg" alt="bandeira">
 
-        <div class="topico">
-            <h2>OBJETIVO</h2>
-            <p>"Somos claros em dizer que nosso objetivo é passar longe da <mark>Romantização de Guerras e do Militarismo</mark>, De modo geral. Cada um de nós tem <mark>Habilidades</mark> úteis e <mark>experiências</mark> a serem compartilhadas para a criação de conteúdo audiovisual nas plataformas, <mark>Visando principalmente o lado psicológico de ex-militares e daqueles que estão na ativa</mark>, independentemente da área de atuação. <mark>Daremos voz</mark> aos <mark>sentimentos</mark> de muitos que estão <mark>calados por alguma razão.</mark>"</p>
-        </div>
-
-        <div class="topico">
-            <h2>ANONIMATO</h2>
-            <p><mark>Nenhum</mark> dos membros tem perfil nas redes sociais. O único ativo além do YouTube continua sendo o TikTok do <a href="https://www.tiktok.com/@borgesmilitary?_t=8p72xZLKQy6&_r=1">@borgesmilitary</a>; <mark>nem mesmo a Stage Group tem algo além do YouTube</mark>. E isso não é para nos escondermos de algo, mas sim porque <mark>não temos interesse nenhum na fama ou no sucesso</mark>. Se crescermos, é pelo conteúdo que entregamos e não por embustes saturados.</p>
-        </div>
+        <span class="arrow left" onclick="changeSlide(-1)">&#10094;</span>
+        <span class="arrow right" onclick="changeSlide(1)">&#10095;</span>
     </div>
-
-    <div class="loader"></div> <!-- Ícone de carregamento -->
-    
-    <h6>NOVIDADES EM BREVE</h6>
-    <p>links:<br>    <a href="https://youtube.com/@stagegrouptatical?si=ZiJgIz5qHzprga-x" style="font-size;10px;">Canal No YouTube</a>
-</p>
+    <h6>Links<h6>
+    <a href="https://t.me/stagegroupbase" class="link-telegram">Telegram</a>
+    <a href="https://youtube.com/@stagegrouptatical?si=4baVg8m8kePAccBq" class="youtube">Youtube</a>
+    <h6>e-mail para contato:</h6>
+    <p style="margin-top: 8px; color: mediumpurple;"><u>stagegroup@proton.me</u></p>
+    <p style="margin-top: 7px;">NÃO TEMOS OUTROS MEIOS DE COMUNICAÇÃO ALÉM DESTES,<br>membros oficiais não tem perfis pessoais em redes sociais.</p>
     <script>
-        // Função para aplicar o efeito de fade-in
-        window.onload = function() {
-            document.getElementById('background').style.opacity = 1; // Altera a opacidade para 1 após o carregamento
-            typeWriter("faça o palhaço chorar."); // Inicia o efeito de digitação
-        };
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.gallery img');
 
-        // Função para o efeito de digitação
-        function typeWriter(text) {
-            let i = 0;
-            const speed = 100; // Velocidade de digitação em milissegundos
-            const typingTextElement = document.getElementById("typing-text");
-
-            function type() {
-                if (i < text.length) {
-                    typingTextElement.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                } else {
-                    // Remove o cursor após a digitação
-                    typingTextElement.style.borderRight = "none";
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
                 }
-            }
-            type();
+            });
+        }
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            showSlide(currentSlide);
         }
     </script>
 </body>

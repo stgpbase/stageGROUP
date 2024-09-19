@@ -1,172 +1,231 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>forum</title>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0px;
-        }
-        body {
-            color: white;
-            margin: 10px;
-            text-align: center;
-            background-color: #000000;
-            font-family: 'Consolas', monospace;
-            font-weight: 40;
-            position: relative;
-            overflow: ;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('imagens/bandeira.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.4;
-            filter: contrast(1.5) blur(9px) saturate(0.2);
-            z-index: -1;
-        }
-        
-        .stage {
-          filter: drop-shadow(1px 0.9px 0px rgba(0, 0, 0, 0.5));
-        }
-        
-        h6 {
-          margin-top: 10px;
-          letter-spacing: 3px;
-          font-size: 10px;
-          margin: 7px;
-          font-weight: 40;
-          opacity: 0.5;
-        }
-        
-        .bandeira {
-          filter: drop-shadow(9px 20px 17px rgba(0, 0, 0, 0.6));
-          display: block;
-          margin: 0 auto;
-          margin-top: 10px;
-        }
-        
-        h2 {
-          font-family: 'Times New Roman', Times, serif;
-          letter-spacing: 0px;
-          margin-top: 17px;
-          font-weight: 50;
-          color: white;
-        }
-        
-        p {
-          font-family: 'Times New Roman', Times, serif;
-          color: #C0C0C0;
-          margin-top: -18px;
-          font-weight: 40;
-          font-size: 12px;
-        }
-        
-        h4 {
-           font-family: 'Times New Roman', Times, serif;
-           font-weight: 40;
-           color: white;
-        }
-        
-        .gallery {
-            position: relative;
-            max-width: 300px;
-            margin: auto;
-            overflow: hidden;
-        }
-        
-        .gallery img {
-            width: 100%;
-            display: none;
-        }
-        
-        .gallery img.active {
-            display: block;
-        }
-        
-        .arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-            user-select: none;
-        }
-        
-        .arrow.left {
-            left: 10px;
-        }
-        
-        .arrow.right {
-            right: 10px;
-        }
-        
-        .link-telegram {
-          color: #076BFF;
-          font-size: 10px;
-        }
-        
-        .youtube {
-          color:red;
-          font-size: 10px;
-        }
-        
-        .icones {
-          margin: 0px;
-          background-filter: blur(2px);
-        }
-    </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forum</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0px;
+    }
+
+    body {
+      color: black;
+      margin: 10px;
+      text-align: center;
+      background-color: #ABABAB;
+      font-family: 'Consolas', monospace;
+      font-weight: 40;
+      position: relative;
+      overflow: ;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.4;
+      filter: contrast(1.5) blur(9px) saturate(0.2);
+      z-index: -1;
+    }
+
+    .stage {
+    }
+
+    h6 {
+      margin-top: 10px;
+      letter-spacing: 3px;
+      font-size: 10px;
+      margin: 7px;
+      font-weight: 40;
+      opacity: 0.5;
+    }
+
+    .bandeira {
+      filter: drop-shadow(9px 20px 17px rgba(0, 0, 0, 0.6));
+      display: block;
+      margin: 0 auto;
+      margin-top: 10px;
+    }
+
+    mark {
+      background-color: #2E352500;
+      color: #471616;
+      padding: 0px 0px;
+    }
+
+    h2 {
+      font-family: 'Times New Roman', Times, serif;
+      letter-spacing: 0px;
+      margin-top: 17px;
+      font-weight: 50;
+      color: white;
+    }
+
+    p {
+      font-family: 'Times New Roman', Times, serif;
+      text-align: left;
+      color: black;
+      margin-top: -18px;
+      font-weight: 40;
+      font-size: 12px;
+      margin: 10px;
+    }
+
+    h4 {
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: 40;
+      color: black;
+    }
+
+    .link-telegram {
+      color: #076BFF;
+      font-size: 10px;
+    }
+
+    .youtube {
+      color: red;
+      font-size: 10px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      margin-top: -18px;
+    }
+
+    .balaclava {
+      margin: 5px;
+    }
+
+    .estats {
+      filter: saturate(0) brightness(-3) contrast(3);
+      margin-top: -10px;
+      align-items: center;
+    }
+
+    .audio-player {
+      display: flex;
+      align-items: center;
+      background-color: #42445A00;
+      padding: 10px;
+      border-radius: 0px;
+      width: 300px;
+      margin: 20px auto;
+      color: black;
+    }
+
+    .play-btn {
+      background-color: #000000;
+      border: none;
+      color: white;
+      padding: 0px;
+      border-radius: 0px;
+      cursor: pointer;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .play-btn:hover {
+      background-color: #000000;
+    }
+
+    .progress {
+      flex-grow: 1;
+      margin: 0 10px;
+      height: 5px;
+      background-color: #ccc;
+      border-radius: 0px;
+      cursor: pointer;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background-color: #000000;
+      border-radius: 0px;
+      width: 0;
+    }
+  </style>
 </head>
+
 <body>
-    <img src="imagens/logo.png" alt="Logo" height="40px" class="stage">
-    <h2>PARAMILITAR?</h2>
-    <p>Um grupo paramilitar é uma organização armada que opera de forma não oficial e que, Geralmente, Não é reconhecida como uma força militar legítima por um Estado. Esses grupos podem ser formados por civis e têm diversas motivações, Que podem incluir políticas, Ideológicas, Étnicas ou religiosas. Em resumo, grupos paramilitares são organizações armadas que operam fora do controle estatal, Com uma variedade de motivações e métodos, Ee que podem ter impactos significativos na segurança e na dinâmica social de uma região.<br><mark>NÓS NÃO SOMOS UM GRUPO PARAMILITAR!</mark></p>
-    <h4>ATIVISMO</h4>
-    <p>Ativismo, em si, não é um crime. Trata-se de uma prática legítima de expressão e mobilização em torno de causas sociais, políticas, econômicas ou ambientais. <mark>O ativismo é uma forma de participação cívica e pode ser fundamental para a promoção de mudanças e a defesa de direitos.</mark></p>
-    
-    <div class="gallery">
-        <img src="imagens/imperio.jpg" alt="ativismo" class="active">
-        <img src="imagens/bandeira.jpg" alt="bandeira">
+  <img src="imagens/logo.png" alt="Logo" height="40px" class="stage">
+  <u><h4>SOBRE NÓS</h4></u>
+  <p>Não somos um grupo paramilitar ou algo do gênero, tampouco uma marca de equipamentos táticos. Estamos mais nas profundezas do meio militar, compreende? Nosso principal intuito é oferecer <mark>apoio psicológico a militares, ex-militares e, quem sabe, a você, homem comum.</mark><br>
+  
+  <br>
+  
+   Não somos uma empresa; <mark>por trás das câmeras existem seres humanos, assim como você.</mark> Não estamos aqui para roubar seu tempo ou inundá-lo com trivialidades. Na verdade, <mark>você não é obrigado a assistir ao que produzimos.</mark><br>
+   
+   <br>
+   
+   <mark><i>"Tudo o que conhecemos não nos pertence.</mark> Se conseguimos ajudá-lo, <mark>talvez alguns de nossos pecados sejam, de certa forma, expiados. (risos)</mark> Estamos com você. Embora não saibamos exatamente o que se passa em sua mente, a matemática não mente, não é mesmo? <mark>É curioso como um projeto underground pode crescer de maneira tão exponencial."</i></mark><br>
+   
+   <br>
+   
+   <div class="container">
+     <img src="imagens/balaclava.jpg" alt="cena" class="balaclava" width="410" height="220">
+     <p style="font-style: italic;">"Não escondemos o rosto por medo ou por qualquer outra razão superficial, mas sim porque não temos interesse na fama. <mark>Que diferença faz para você saber quem está por trás da máscara?</mark> A única coisa verdadeiramente relevante é a nossa voz, e, ainda assim, muitas vezes a alteramos. Por quê? A resposta é simples: <mark>podemos ser qualquer pessoa. Podemos compartilhar o metrô com você nos dias de pico, cruzar seu caminho casualmente, estar no seu ambiente de trabalho, entre outros."</mark>
+   </div>
+   
+   <p>Como já foi mencionado anteriormente, a única coisa que realmente importa é transmitir nossa mensagem em formatos digitais — .mp4, .png, .mp3, .jpg, e assim por diante. <mark>A essência do que fazemos reside na comunicação e na conexão que estabelecemos, não na nossa identidade individual.</mark>
 
-        <span class="arrow left" onclick="changeSlide(-1)">&#10094;</span>
-        <span class="arrow right" onclick="changeSlide(1)">&#10095;</span>
+Afirmamos com convicção que os números virão, que cresceremos e que teremos visibilidade. No entanto, é fundamental que não nos deixemos corromper por qualquer benefício que essa visibilidade possa nos proporcionar. <mark>A verdadeira integridade reside em manter nossos princípios e em garantir que nossa mensagem permaneça autêntica e impactante, independentemente do reconhecimento que possamos receber.</mark>
+</p><br>
+
+<img src="imagens/igual.jpg" alt="estats" class="estats" width="500" height="330">
+<img src="imagens/igual2.jpg" alt="estats" class="estats" width="500" height="330">
+<h4><i>"tudo já aconteceu, respire e aguente firme."</i></h4>
+
+<div class="audio-player">
+    <button class="play-btn" id="playBtn">ouvir?</button>
+    <div class="progress" id="progress">
+        <div class="progress-bar" id="progressBar"></div>
     </div>
-    <h6>Links</h6>
-    <a href="https://t.me/stagegroupbase" class="link-telegram">Telegram</a>
-    <a href="https://youtube.com/@stagegrouptatical?si=4baVg8m8kePAccBq" class="youtube">Youtube</a>
-    <h6>e-mail para contato:</h6>
-    <p style="margin-top: 8px; color: purple;"><u>stagegroup@proton.me</u></p>
-    <div class="icones">
-      <img src="imagens/nazi.png" alt="anti-nazi" style="width: 35px; height: auto;">
-      <img src="imagens/comuna.png" alt="anti-comuna" style="width: 35px; height: auto;">
-    </div>
-    <p style="margin-top: 7px;"><mark>NÃO USAMOS O NOME DE DEUS EM VÃO.</mark><br>Acreditamos sim em Deus e temos nossa fé mas não fazemos de tal um escudo para nossos atos ou falas, O que dizemos é de total responsabilidade nossa sem outrem.</p>
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.gallery img');
+</div>
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) {
-                    slide.classList.add('active');
-                }
-            });
-        }
+<audio id="audio" src="audios/lmirl.mp3"></audio>
 
-        function changeSlide(direction) {
-            currentSlide = (currentSlide + direction + slides.length) % slides.length;
-            showSlide(currentSlide);
+<script>
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('playBtn');
+    const progress = document.getElementById('progress');
+    const progressBar = document.getElementById('progressBar');
+
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playBtn.textContent = 'parar';
+        } else {
+            audio.pause();
+            playBtn.textContent = 'continuar?';
         }
-    </script>
+    });
+
+    audio.addEventListener('timeupdate', () => {
+        const percent = (audio.currentTime / audio.duration) * 100;
+        progressBar.style.width = percent + '%';
+    });
+
+    progress.addEventListener('click', (e) => {
+        const rect = progress.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const totalWidth = rect.width;
+        const percent = offsetX / totalWidth;
+        audio.currentTime = percent * audio.duration;
+    });
+</script>
+
+<p>e-mail para contato:</p>
+<p style="margin-top: 8px; color: purple;"><u>stagegroup@proton.me</u></p>
 </body>
-</html>
+
+                                                                                                                                                                       </html>
+    

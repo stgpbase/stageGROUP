@@ -2,86 +2,237 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forum</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Menu</title>
+  <style>
+    body {
+      display: flex;
+      background-image: url('imagens/clga.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      height: 100vh;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin: 30px;
+      background-color: #3D0C53;
+      font-family: 'Consolas', monospace;
+      color: white;
+      text-align: center;
+    }
+    
+    .rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.drop {
+    position: absolute;
+    top: -10px;
+    width: 50px;
+    height: 50px;
+    background: url('imagens/gota.png') no-repeat center;
+    background-size: contain;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+    .logo-container2 {
+      position: relative;
+    }
+
+
+    .logo-container {
+      position: relative;
+    }
+    
+    .pe {
+      font-size: 12px;
+      text-align: left;
+      margin-right: 22px;
+      color: #FFFFFF;
+      margin-left: 22px;
+    }
+    
+    .cap {
+      position: absolute;
+      top: 10px;
+      left: 55%;
+      transform: translateX(-30%);
+      animation: float 2s ease-in-out infinite;
+      opacity: ;
+    }
+    
+    p {
+      margin: 0px;
+      color: #000000;
+      text-align: center;
+    }
+    
+    u {
+      color: red;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translate(-50%, 30px);
+      }
+      50% {
+        transform: translate(-50%, -90px);
+      }
+      100% {
+        transform: translate(-50%, 30px);
+      }
+    }
+    
+    .aba {
+      width: 300px;
+      background-color: #929292;
+      /* Cor de fundo da aba */
+      box-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+      border-radius: 0px 0px 0 0;
+      position: relative;
+      padding: 2px;
+      margin: 12px;
+    }
+
+    .titulo {
+      background-color: #000000;
+      color: #FFFFFF;
+      padding: 3px;
+      border-radius: 0px 0px 0 0;
+      font-weight: bold;
+      text-align: center;
+      font-size: 10px;
+    }
+
+    .conteudo {
+      background-color: #FFFFFF;
+     
+      color: #000000;
+      padding: 4px;
+      border-radius: 1 0 11px 3px;
+     
+      height: 100px;
+      
+      overflow: auto;
+      
+      font-size: 10px;
+    }
+
+    .frase {
+      color: #232323;
+      text-align: center;
+      font-size: 10px;
+      font-style: ;
+    }
+    
+    .links {
+      color: #B000FF;
+    }
+    
+    .sind {
+      text-align: left;
+    }
+    
+    .vermelho {
+      background-color: black;
+      color: red;
+      text-align: ;
+    }
+  </style>
 </head>
 
 <body>
-  <header>
-    <img src="imagens/logo.png" alt="Logo" height="40px" class="stage">
-  </header>
-
-  <main>
-    <section>
-      <u><h4>SOBRE NÓS</h4></u>
-      <p>Não somos um grupo paramilitar ou algo do gênero, tampouco uma marca de equipamentos táticos. Estamos mais nas profundezas do meio militar, compreende? Nosso principal intuito é oferecer <mark>apoio psicológico a militares, ex-militares e, quem sabe, a você, homem comum.</mark></p>
-      
-      <p>Não somos uma empresa; <mark>por trás das câmeras existem seres humanos, assim como você.</mark> Não estamos aqui para roubar seu tempo ou inundá-lo com trivialidades. Na verdade, <mark>você não é obrigado a assistir ao que produzimos.</mark></p>
-
-      <p><mark><i>"Tudo o que conhecemos não nos pertence.</mark> Se conseguimos ajudá-lo, <mark>talvez alguns de nossos pecados sejam, de certa forma, expiados. (risos)</mark> Estamos com você. Embora não saibamos exatamente o que se passa em sua mente, a matemática não mente, não é mesmo? <mark>É curioso como um projeto underground pode crescer de maneira tão exponencial."</i></mark></p>
-    </section>
-
-    <section class="container">
-      <img src="imagens/balaclava.jpg" alt="Cena" class="balaclava" width="410" height="220">
-      <p style="font-style: italic;">"Não escondemos o rosto por medo ou por qualquer outra razão superficial, mas sim porque não temos interesse na fama. <mark>Que diferença faz para você saber quem está por trás da máscara?</mark> A única coisa verdadeiramente relevante é a nossa voz, e, ainda assim, muitas vezes a alteramos. Por quê? A resposta é simples: <mark>podemos ser qualquer pessoa. Podemos compartilhar o metrô com você nos dias de pico, cruzar seu caminho casualmente, estar no seu ambiente de trabalho, entre outros."</mark></p>
-    </section>
-
-    <section>
-      <p>Como já foi mencionado anteriormente, a única coisa que realmente importa é transmitir nossa mensagem em formatos digitais — .mp4, .png, .mp3, .jpg, e assim por diante. <mark>A essência do que fazemos reside na comunicação e na conexão que estabelecemos, não na nossa identidade individual.</mark></p>
-      <p>Afirmamos com convicção que os números virão, que cresceremos e que teremos visibilidade. No entanto, é fundamental que não nos deixemos corromper por qualquer benefício que essa visibilidade possa nos proporcionar. <mark>A verdadeira integridade reside em manter nossos princípios e em garantir que nossa mensagem permaneça autêntica e impactante, independentemente do reconhecimento que possamos receber.</mark></p>
-    </section>
-
-    <section>
-      <img src="imagens/igual.jpg" alt="Estats" class="estats" width="500" height="330">
-      <img src="imagens/igual2.jpg" alt="Estats" class="estats" width="500" height="330">
-      <h4><i>"tudo já aconteceu, respire e aguente firme."</i></h4>
-    </section>
-
-    <div class="audio-player">
-      <button class="play-btn" id="playBtn">ouvir?</button>
-      <div class="progress" id="progress">
-        <div class="progress-bar" id="progressBar"></div>
-      </div>
+    <div class="rain"></div>
+    <div class="logo-container2">
+      <img src="imagens/logo.png" width="229px" height="120px" alt="logo" class="cap"> <br>
     </div>
+  <div class="logo-container">
+    <img src="imagens/dance.gif" width="229px" height="120px" alt="danco" class="cap"> <br>
+  </div>
+    <div class="aba">
+      <div class="titulo">informações</div>
+      <div class="conteudo">
+        <h1>POLÍTICA</h1>
+        <h5></h5>
+        <p class="frase"><mark><b>esse definitivamente não é um grupo político.</b></mark><br><br>BOLSONAROPRESIDENTE2026</p>
+        <img src="imagens/amor.jpg" width="200px" height="150px">
+        <h1><b>ARMAS?</b></h1>
+        <p>o tópico é interessante para o grupo, <b>desde que, você não seja um charlatão ou aqueles caras com síndrome de vagalume</b> e principalmente, não fazer nada ilegal ou incitar atos.</p>
+        <h3 class="sind">SÍNDROME DE VAGALUME:</h3>
+        <p class="sind">Indivíduo que adquiriu algum conhecimento sobre qualquer assunto, muitas vezes somente até onde o interessou ou foi agradável ao cérebro do cidadão estudar.</p>
+        <h3 class="sind">PORQUE VAGALUME?</h3>
+        <p class="sind"><mark><b>porque a bundinha deles pisca, quando acham que são superiores por saber alguma merda kkkkkkkkkk vsf</b></mark></p><br>
+        <p>existe uma diferença enorme e notável quando uma pessoa realmente quer te ensinar algo, explicar demasiado assunto, sem ser <b>arrogante</b>.</p><br>
+        <img src="imagens/south.gif" width="230px" height="100px">
+        <img src="imagens/south2.gif" width="230px" height="230px"><br>
+        <h1><mark class="vermelho">CONHECIMENTO É PRA COMPARTILHAR IRMÃO</mark></h1>
+        <h1><mark class="vermelho">SEJA HUMILDE</mark></h1>
+        <h1><mark class="vermelho">FAÇA DESTE AMBIENTE AGRADÁVEL</mark></h1>
+        <h1><mark class="vermelho">NINGUÉM GOSTA DE GENTE ASSIM</mark></h1>
+        <h6><u>serve para qualquer tópico</u></h6>
+        <img src="imagens/manut.gif" width="230px" height="230px"><br>
+        <h1 class="sind">MILITARISMO, PARA-MILITAR, GUERRILHA</h1>
+        <p class="sind">gostamos sim de armas, assuntos operacionais, técnicas, manuais etc... <mark>MAS NÃO VIVEMOS EM UMA SÉRIE OU FILME</mark>, não temos ligação alguma com instituições militares ou secundárias, alguns membros fazem parte e ainda sim não ficam com assuntos fora da realidade, planejando, organizando você sabe o que.</p><br>>
+        <img src="imagens/milic.jpg" class="sind" width="230px" height="120px"><br>
+        <h3>SOMOS HOMENS ENVELHECENDO</h3>
+        <p>não existe tempo pra ficar pensando em como se vingar de wlguma coisa, que se foda, alguns de nós está beirando os 25, 30, 40, só queremos saber de ter paz e aos fins de semana dar alguns tiros, pescar, apriveitar a vida sem ódio entende?</p>
+        <h5>TEMOS APAREÇO PELO INDIVIDUALISMO</h5>
+        <p>claro que no contexto pessoal financeiro, sem dúvidas uma das discussões principais no grupo envolverá planos de como alcançar o sucesso para no fim, você se entupir de dinheiro, comprar sua arminha, ter sua TOYOTA, tudo isso sem precisar passar por essa coisa de adolescente "grupo privado militar", "vamos te ensinar e treinar, faça junte-se a nós"</p>
+        <h2>para quem já serviu e está na reserva</h2>
+        <p>a farda se tornou pretexto para conseguir transar, se engrandecer e afins.</p>
+        
+        
 
-    <audio id="audio" src="audios/lmirl.mp3"></audio>
-  </main>
+        
+        <h5>OBRIGADO POR ACESSAR!</h5>
+        <h5>OBRIGADO POR ACESSAR!</h5>
+        <h5>OBRIGADO POR ACESSAR!</h5>
+        <h5>OBRIGADO POR ACESSAR!</h5>
+        <h5>OBRIGADO POR ACESSAR!</h5>
+      </div>
+      <div class="texto">
+      </div>
+    </div><br>
+    
+    <a href="https://t.me/stagegroupbase" class="links">Telegram</a>
+    <a href="https://youtube.com/@stagegroupbase?si=KJuQETmEZQiQcCaV" class="links">YouTube</a>
+    <a href="404" class="links">Briar</a>
+    <a href="4004" class="links">Apoiadores</a>
+    <a href="404" class="links">Blog</a>
+    <a href="404" class="links">Batalhão Ascov</a>
+    <a href="404" class="links">Contato</a>
 
-  <footer>
-    <p>e-mail para contato:</p>
-    <p style="margin-top: 8px; color: purple;"><u>stagegroup@proton.me</u></p>
-  </footer>
-
-  <script>
-    const audio = document.getElementById('audio');
-    const playBtn = document.getElementById('playBtn');
-    const progress = document.getElementById('progress');
-    const progressBar = document.getElementById('progressBar');
-
-    playBtn.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play();
-        playBtn.textContent = 'parar';
-      } else {
-        audio.pause();
-        playBtn.textContent = 'continuar?';
+    
+    
+    <script>
+      const rainContainer = document.querySelector('.rain');
+    
+      function createRaindrop() {
+        const drop = document.createElement('div');
+        drop.className = 'drop';
+        drop.style.left = Math.random() * 100 + 'vw'; // Posição aleatória
+        drop.style.animationDuration = Math.random() * 0 + 5 + 's'; // Duração aleatória
+        rainContainer.appendChild(drop);
+    
+        drop.addEventListener('animationend', () => {
+          drop.remove();
+        });
       }
-    });
-
-    audio.addEventListener('timeupdate', () => {
-      const percent = (audio.currentTime / audio.duration) * 100;
-      progressBar.style.width = percent + '%';
-    });
-
-    progress.addEventListener('click', (e) => {
-      const rect = progress.getBoundingClientRect();
-      const offsetX = e.clientX - rect.left;
-      const totalWidth = rect.width;
-      const percent = offsetX / totalWidth;
-      audio.currentTime = percent * audio.duration;
-    });
-  </script>
+    
+      setInterval(createRaindrop, 150);
+    </script>
 </body>
+
 </html>

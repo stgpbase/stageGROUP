@@ -1,241 +1,90 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
+<html lang="en">
+  
   <title>Menu</title>
-  <style>
-    body {
-      display: flex;
-      background-image: url('imagens/clga.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      height: 100vh;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      margin: 30px;
-      background-color: #3D0C53;
-      font-family: 'Consolas', monospace;
-      color: white;
-      text-align: center;
-    }
-    
-    .rain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.drop {
-    position: absolute;
-    top: -10px;
-    width: 50px;
-    height: 50px;
-    background: url('imagens/gota.png') no-repeat center;
-    background-size: contain;
-    animation: fall linear forwards;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
-}
-
-    .logo-container2 {
-      position: relative;
-    }
-
-
-    .logo-container {
-      position: relative;
-    }
-    
-    .pe {
-      font-size: 12px;
-      text-align: left;
-      margin-right: 22px;
-      color: #FFFFFF;
-      margin-left: 22px;
-    }
-    
-    .cap {
-      position: absolute;
-      top: 10px;
-      left: 55%;
-      transform: translateX(-30%);
-      animation: float 2s ease-in-out infinite;
-      opacity: ;
-    }
-    
-    p {
-      margin: 0px;
-      color: #000000;
-      text-align: center;
-    }
-    
-    u {
-      color: red;
-    }
-
-    @keyframes float {
-      0% {
-        transform: translate(-50%, 30px);
+  
+  <head>
+    <style>
+      body {
+        background-color: #000000;
+        color: white;
+        font-family: 'CONSOLAS', monospace;
+        text-align: center;
+        margin: 50px;
       }
-      50% {
-        transform: translate(-50%, -90px);
-      }
-      100% {
-        transform: translate(-50%, 30px);
-      }
-    }
-    
-    .aba {
-      width: 300px;
-      background-color: #929292;
-      /* Cor de fundo da aba */
-      box-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
-      border-radius: 0px 0px 0 0;
-      position: relative;
-      padding: 2px;
-      margin: 12px;
-    }
-
-    .titulo {
-      background-color: #000000;
-      color: #FFFFFF;
-      padding: 3px;
-      border-radius: 0px 0px 0 0;
-      font-weight: bold;
-      text-align: center;
-      font-size: 10px;
-    }
-
-    .conteudo {
-      background-color: #FFFFFF;
-     
-      color: #000000;
-      padding: 4px;
-      border-radius: 1 0 11px 3px;
-     
-      height: 100px;
       
-      overflow: auto;
-      
-      font-size: 10px;
-    }
-
-    .frase {
-      color: #232323;
-      text-align: center;
-      font-size: 10px;
-      font-style: ;
-    }
-    
-    .links {
-      color: #B000FF;
-      font-size: 10px;
-    }
-    
-    .sind {
-      text-align: left;
-    }
-    
-    .vermelho {
-      background-color: black;
-      color: red;
-      text-align: ;
-    }
-  </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-    <div class="rain"></div>
-    <div class="logo-container2">
-      <img src="imagens/logo.png" width="229px" height="120px" alt="logo" class="cap"> <br>
-    </div>
-  <div class="logo-container">
-    <img src="imagens/dance.gif" width="229px" height="120px" alt="danco" class="cap"> <br>
-  </div>
-    <div class="aba">
-      <div class="titulo">informações</div>
-      <div class="conteudo">
-        <h1>POLÍTICA</h1>
-        <h5></h5>
-        <p class="frase"><mark><b>esse definitivamente não é um grupo político.</b></mark><br><br>BOLSONAROPRESIDENTE2026</p>
-        <img src="imagens/amor.jpg" width="200px" height="150px">
-        <h1><b>ARMAS?</b></h1>
-        <p>o tópico é interessante para o grupo, <b>desde que, você não seja um charlatão ou aqueles caras com síndrome de vagalume</b> e principalmente, não fazer nada ilegal ou incitar atos.</p>
-        <h3 class="sind">SÍNDROME DE VAGALUME:</h3>
-        <p class="sind">Indivíduo que adquiriu algum conhecimento sobre qualquer assunto, muitas vezes somente até onde o interessou ou foi agradável ao cérebro do cidadão estudar.</p>
-        <h3 class="sind">PORQUE VAGALUME?</h3>
-        <p class="sind"><mark><b>porque a bundinha deles pisca, quando acham que são superiores por saber alguma merda kkkkkkkkkk vsf</b></mark></p><br>
-        <p>existe uma diferença enorme e notável quando uma pessoa realmente quer te ensinar algo, explicar demasiado assunto, sem ser <b>arrogante</b>.</p><br>
-        <img src="imagens/south.gif" width="230px" height="100px">
-        <img src="imagens/south2.gif" width="230px" height="230px"><br>
-        <h1><mark class="vermelho">CONHECIMENTO É PRA COMPARTILHAR IRMÃO</mark></h1>
-        <h1><mark class="vermelho">SEJA HUMILDE</mark></h1>
-        <h1><mark class="vermelho">FAÇA DESTE AMBIENTE AGRADÁVEL</mark></h1>
-        <h1><mark class="vermelho">NINGUÉM GOSTA DE GENTE ASSIM</mark></h1>
-        <h6><u>serve para qualquer tópico</u></h6>
-        <img src="imagens/manut.gif" width="230px" height="230px"><br>
-        <h1 class="sind">MILITARISMO, PARA-MILITAR, GUERRILHA</h1>
-        <p class="sind">gostamos sim de armas, assuntos operacionais, técnicas, manuais etc... <mark>MAS NÃO VIVEMOS EM UMA SÉRIE OU FILME</mark>, não temos ligação alguma com instituições militares ou secundárias, alguns membros fazem parte e ainda sim não ficam com assuntos fora da realidade, planejando, organizando você sabe o que.</p><br>>
-        <img src="imagens/milic.jpg" class="sind" width="230px" height="120px"><br>
-        <h3>SOMOS HOMENS ENVELHECENDO</h3>
-        <p>não existe tempo pra ficar pensando em como se vingar de wlguma coisa, que se foda, alguns de nós está beirando os 25, 30, 40, só queremos saber de ter paz e aos fins de semana dar alguns tiros, pescar, apriveitar a vida sem ódio entende?</p>
-        <h5>TEMOS APAREÇO PELO INDIVIDUALISMO</h5>
-        <p>claro que no contexto pessoal financeiro, sem dúvidas uma das discussões principais no grupo envolverá planos de como alcançar o sucesso para no fim, você se entupir de dinheiro, comprar sua arminha, ter sua TOYOTA, tudo isso sem precisar passar por essa coisa de adolescente "grupo privado militar", "vamos te ensinar e treinar, faça junte-se a nós"</p>
-        <h2>para quem já serviu e está na reserva</h2>
-        <p>a farda se tornou pretexto para conseguir transar, se engrandecer e afins.</p>
-        
-        
-
-        
-        <h5>OBRIGADO POR ACESSAR!</h5>
-        <h5>OBRIGADO POR ACESSAR!</h5>
-        <h5>OBRIGADO POR ACESSAR!</h5>
-        <h5>OBRIGADO POR ACESSAR!</h5>
-        <h5>OBRIGADO POR ACESSAR!</h5>
-      </div>
-      <div class="texto">
-      </div>
-    </div><br>
-    
-    <a href="https://t.me/stagegroupbase" class="links">Telegram</a>
-    <a href="https://youtube.com/@stagegroupbase?si=KJuQETmEZQiQcCaV" class="links">YouTube</a>
-    <a href="404" class="links">Briar</a>
-    <a href="4004" class="links">Apoiadores</a>
-    <a href="404" class="links">Blog</a>
-    <a href="404" class="links">Batalhão Ascov</a>
-    <a href="404" class="links">Contato</a>
-
-    
-    
-    <script>
-      const rainContainer = document.querySelector('.rain');
-    
-      function createRaindrop() {
-        const drop = document.createElement('div');
-        drop.className = 'drop';
-        drop.style.left = Math.random() * 100 + 'vw'; // Posição aleatória
-        drop.style.animationDuration = Math.random() * 0 + 5 + 's'; // Duração aleatória
-        rainContainer.appendChild(drop);
-    
-        drop.addEventListener('animationend', () => {
-          drop.remove();
-        });
+      header {
+        margin: 0px;
       }
-    
-      setInterval(createRaindrop, 150);
-    </script>
-</body>
-
+      
+      .texto {
+        text-align: left;
+        color: white;
+        margin: 14px;
+        margin-top: -10px;
+        font-size: 15px;
+      }
+      
+      .frase2 {
+        text-align: left;
+        color: white;
+        margin: 14px;
+        font-style: 
+      }
+      
+      .marke {
+        background-color: red;
+        color: black;
+        font-weight: bold;
+      }
+      
+      .telegram {
+        color: #0088FF;
+        font-weight: bold;
+      }
+      
+      .youtube {
+        color: #FF0000;
+        font-weight: bold;
+      }
+      
+      .briar {
+        color: #358F33;
+        font-weight: bold;
+      }
+      
+      .proton {
+        color: #9F00FF;
+        font-weight: bold;
+        background-color: #400465;
+      }
+      
+      .pr {
+        background-color: #AF59E3;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="imagens/stg.gif" alt="stage" width="450" height="200">
+      
+      <div style="border: 0px solid red; padding: 0px; margin: 20px; background-color: #FF0000; border-radius: 0px;">
+        <h1 class="frase2">ESTAMOS EM MANUTENÇÃO!</h1>
+        </div>
+      </div>
+      <h5><mark>links disponíveis:</mark></h5>
+      <a class="telegram" href="https://t.me/stagegroupbase">Telegram</a><br>
+      <a class="youtube" href="https://youtu.be/r50df1cAZas?si=AxxpfKYjpO1iM-5T">YouTube</a><br>
+      <a class="briar" href="?">Briar</a><br>
+      <h6>e-mail para contato:</h6>
+      <mark class="pr"><p class="proton">stagegroup@proton.me</p></mark>
+      
+    </header>
+    <main>
+      
+    </main>
+    <footer>
+      
+    </footer>
+  </body>
 </html>

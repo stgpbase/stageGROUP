@@ -1,90 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-  
-  <title>Menu</title>
-  
-  <head>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Responsiva</title>
     <style>
-      body {
-        background-color: #000000;
-        color: white;
-        font-family: 'CONSOLAS', monospace;
-        text-align: center;
-        margin: 50px;
-      }
-      
-      header {
-        margin: 0px;
-      }
-      
-      .texto {
-        text-align: left;
-        color: white;
-        margin: 14px;
-        margin-top: -10px;
-        font-size: 15px;
-      }
-      
-      .frase2 {
-        text-align: left;
-        color: white;
-        margin: 14px;
-        font-style: 
-      }
-      
-      .marke {
-        background-color: red;
-        color: black;
-        font-weight: bold;
-      }
-      
-      .telegram {
-        color: #0088FF;
-        font-weight: bold;
-      }
-      
-      .youtube {
-        color: #FF0000;
-        font-weight: bold;
-      }
-      
-      .briar {
-        color: #358F33;
-        font-weight: bold;
-      }
-      
-      .proton {
-        color: #9F00FF;
-        font-weight: bold;
-        background-color: #400465;
-      }
-      
-      .pr {
-        background-color: #AF59E3;
-      }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Centraliza o texto e a imagem */
+        }
+        header {
+            background-color: black;
+            color: white;
+            padding: 0px 0;
+        }
+        
+        .cach {
+          margin-top: -10px;
+        }
+        
+        .video {
+          background-color: black;
+          border: none;
+        }
+        
+        .telegram  {
+          font-weight: bold;
+          background-color: #200332;
+          color: #9F00FF;
+        }
+        
+        img {
+            max-width: 100%; /* Faz a imagem se ajustar à largura do contêiner */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+        footer {
+            padding: 3px 0;
+            background-color: #000000;
+            color: white;
+        }
+        
     </style>
-  </head>
-  <body>
-    <header>
-      <img src="imagens/stg.gif" alt="stage" width="450" height="200">
-      
-      <div style="border: 0px solid red; padding: 0px; margin: 20px; background-color: #FF0000; border-radius: 0px;">
-        <h1 class="frase2">ESTAMOS EM MANUTENÇÃO!</h1>
-        </div>
-      </div>
-      <h5><mark>links disponíveis:</mark></h5>
-      <a class="telegram" href="https://t.me/stagegroupbase">Telegram</a><br>
-      <a class="youtube" href="https://youtu.be/r50df1cAZas?si=AxxpfKYjpO1iM-5T">YouTube</a><br>
-      <a class="briar" href="?">Briar</a><br>
-      <h6>e-mail para contato:</h6>
-      <mark class="pr"><p class="proton">stagegroup@proton.me</p></mark>
-      
-    </header>
-    <main>
-      
-    </main>
-    <footer>
-      
-    </footer>
-  </body>
+</head>
+<body>
+
+<header>
+    <img src="imagens/stage.jpg" alt="bandeira">
+    <img class="cach" src="imagens/cache.jpg" alt="cache">
+    <img class="cach" src="imagens/telegram.jpg" alt="pp">
+<video class="video" width="640" height="360" controls>
+<source src="imagens/bluezao.mp4" type="video/mp4">
+Seu navegador não suporta a tag de vídeo.
+</video>
+<a class="telegram" href="https://t.me/stagegroupbase">ENTRAR</a>
+</header>
+
+<footer>
+    <p>&copy; 2023 Minha Página. Todos os direitos reservados.</p>
+</footer>
+
+</body>
 </html>

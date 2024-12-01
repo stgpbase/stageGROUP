@@ -3,64 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Responsiva</title>
+    <title>stagegroupcorp</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: black;
-            margin: 0;
-            padding: 0;
-            text-align: center; /* Centraliza o texto e a imagem */
-        }
-        header {
-            background-color: black;
-            color: white;
-            padding: 0px 0;
-        }
-        
-        .cach {
-          margin-top: -10px;
-        }
-        
-        .video {
-          background-color: black;
-          border: none;
-        }
-        
-        .telegram  {
-          font-weight: bold;
-          background-color: #200332;
-          color: #9F00FF;
-        }
-        
-        img {
-            max-width: 100%; /* Faz a imagem se ajustar à largura do contêiner */
-            height: auto; /* Mantém a proporção da imagem */
-        }
-        footer {
-            padding: 3px 0;
-            background-color: #000000;
-            color: white;
-        }
-        
+
+body {
+    font-family: 'Consolas', monospace;
+    background: url('imagens/fundo.jpg') center/cover repeat #1E1E1E;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    flex-direction: column;
+}
+
+header {
+    background-color: black;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.comment-container {
+   box-shadow: 0px 7px 19px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    background: black;
+    padding: 6px;
+    margin: 80px 0 15px;
+    color: white;
+    width: 430px;
+    position: relative;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.comment-author {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+    letter-spacing: 8px;
+    color: #B00A0A;
+    animation: colorChange 1s infinite;
+}
+
+.comment-text {
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.like-button {
+    background: #222;
+    color: #FFF;
+    border: none;
+    padding: 1px 9px;
+    cursor: pointer;
+    margin-top: 22px;
+}
+
+.like-count {
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: right;
+    font-size: 10px;
+    color: #A9A9A9;
+}
+
+@keyframes colorChange {
+    0% { color: #00FF02; }
+    25% { color: #FFE100; }
+    50% { color: #001BFF; }
+    75% { color: black; }
+    100% { color: #00FF02; }
+}
+
+.enf {
+    background-color: #000586;
+    color: white;
+}
+
+.post {
+    background-color: white;
+       box-shadow: 0px 7px 19px rgba(0, 0, 0, 0.5); 
+    color: black;
+    padding: 6px;
+    font-size: 13px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 222px;
+    height: 120px;
+    text-shadow: 0px 0.5px 0px rgba(0, 0, 0, 1);
+    align-items: center;
+}
+
+.sobre {
+    margin: 5px 0;
+   background-image: url(imagens/tele.jpg);
+  background-size: cover;
+ background-position: center;
+    color: #CFECFF;
+    margin-bottom: 20px;
+text-align: left;
+background-color: #0F44AF;
+padding: 9px;
+    width: 260px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.telegram {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    background-color: #0473BD;
+    color: white;
+    padding: 2px;
+             box-shadow: 0px 0px 29px rgba(255, 255, 255, 1); 
+    text-decoration: none;
+}
+
+.ad {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+marquee {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    width: 200px;
+}
+.dez {
+  background-color: black;
+  color: red;
+  font-weight: bold;
+  padding-right: 12px;
+}
+.verd {
+  background-color: #1AFC24;
+  color: #1AFC24;
+}
+.con {
+  font-family: 'CONSOLAS', monospace;
+  color: black;
+  background-color: #FFFFFF;
+  padding: 7px;
+}
+.amarel {
+  background-color: #FFFA00;
+  color: #FFFA00;
+}
+.mil {
+  position: absolute;
+  top: 535px;
+left: 360px;  
+}
+.rosa {
+  background-color: #E99DD6;
+  background-image: url('imagens/rosas.jpg');
+  background-size: cover;
+  color: #E5AAE2;
+         box-shadow: 0px 0px 29px rgba(255, 175, 235, 1); 
+  background-position: center;
+  padding: 7px;
+}
+.rose {
+  font-family: Consolas, monospace;
+  font-weight: bold;
+  padding: 0px;
+  text-align: right;
+      text-shadow: 0.2px 0.2px 0px rgba(255, 255, 255, 1);
+  font-size: 6px;
+}
+
+.h3 {
+  text-align: left;
+}
     </style>
 </head>
 <body>
-
-<header>
-    <img src="imagens/stage.jpg" alt="bandeira">
-    <img class="cach" src="imagens/cache.jpg" alt="cache">
-    <img class="cach" src="imagens/telegram.jpg" alt="pp">
-<video class="video" width="640" height="360" controls>
-<source src="imagens/bluezvo.mp4" type="video/mp4">
-Seu navegador não suporta a tag de vídeo.
-</video>
-<a class="telegram" href="https://t.me/stagegroupbase">ENTRAR</a>
-</header>
-
-<footer>
-    <p>&copy; 2023 Minha Página. Todos os direitos reservados.</p>
-</footer>
-
+  <header>
+   
+  </header>
+    <main>
+        <div class="comment-container">
+            <img src="imagens/bala.jpg" alt="Foto de perfil" class="profile-pic">
+            <div>
+                <div class="comment-author">Matarazzo</div>
+                <div class="comment-text">a STAGEGROUP ou 19-7 ainda é um projeto recente voltado para assuntos meio pesados entende? mas nossa intenção não é de forma alguma cometer crimes ou espalhar o ódio como se muito vê na internet. Um exemplo disso são os adolescentes "neo-********" de TikTok, disfarçam sua idéia radical com mensagens motivadoras ou propagandas que te "abraçam" e acollhem em um momento de fraqueza mental da mesma forma que o esquerdismo/comunismo.<br>Se pudéssemos usaríamos do individualismo mas como somos um grupo isso não é viável, queremos que cada membro cresça exponencialmente. Nosso principal intuito é encontrar meios para a liberdade de forma realista e clara, nada lunático ou absurdo pois somos humanos, racionais e capazes de encontrar um caminho.<br><mark class="enf">Que se dane a sua cor, seu cargo, e o quanto você tem. Por algum motivo seu caixão não vai apodrecer igual ao de quem recebe menos que você? e seu corpo?</mark><br>
+                COMPARTILHE O QUE VOCÊ SABE, SEU CONHECIMENTO! mas sem ser um arrombado orgulhoso cheio de si.
+                </div>
+                <button class="like-button" id="likeButton">Curtir</button>
+                <div class="like-count" id="likeCount">Curtidas: 0</div>
+            </div>
+        </div> 
+        <details class="sobre">
+           <summary></summary>
+           <img src="imagens/telegram.png" alt="telegram" width="130px">
+           STAGEGROUP
+           <p class="con">
+             ***** <mark class="dez">+18</mark><br>
+             Artes Marciais <mark class="amarel">a</mark><br>
+             Academia <mark class="verd">a</mark><br>
+             Concursos <mark class="verd">a</mark><br>
+             Conversa Fiada <mark class="amarel">a</mark><br>
+             Conselhos <mark class="verd">a</mark><br>
+             3D<mark class="dez">IDR</mark>Ipressoras<br>
+             Política <mark class="dez">POSSÍVEIS DISCUSSÕES</mark><br>
+             Militarismo <mark class="amarel">a</mark><br>
+             Guerras <mark class="dez">?</mark><br>
+             shitpost <mark class="dez">4°</mark>
+           </p>
+           <p><b>Mulheres são aceitas no grupo mas </b>é algo destinado ao <b>público masculino</b>, por esse motivo <b>ninguém vai se responsabilizar caso você se sinta ofendida com alguma mensagem.</p></b><p class="rose"><mark class="rosa">VOCÊ NÃO É SUPERIOR SÓ POR TER UM PAR DE PEITOS</mark>
+           
+           </p>
+           <a class="telegram" href="https://t.me/stagegroupbase">Entrar</a>
+         </details>
+<h3>TEM ALGUMA HABILIDADE?</h3>
+<p>entre em contato caso você ache ser útil para o projeto.</p>
+    </main>
+    <script>
+        const likeButton = document.getElementById('likeButton');
+        const likeCount = document.getElementById('likeCount');
+        let likes = Math.floor(Math.random() * 10005) + 1;
+        likeCount.textContent = `Curtidas: ${likes}`;
+        likeButton.addEventListener('click', () => likeCount.textContent = `Curtidas: ${++likes}`);
+    </script>
 </body>
 </html>
